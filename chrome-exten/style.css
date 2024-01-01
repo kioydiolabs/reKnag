@@ -1,0 +1,62 @@
+body{
+    background-color: #1e1e1e;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    background-image: url(./icons/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a{
+    color: #2828fd;
+    margin-left: 5px;
+}
+
+#maindiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+#copy{
+    font-size: 10px;
+    margin-top: 0px;
+}
+
+#submit{
+    margin-top: 5px;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid rgb(88, 86, 86);
+}
+
+#confirm{
+    display: block;
+    color: white;
+    border-radius: 5px;
+    background-color: #00d26a;
+    margin: 5px;
+    padding: 2px;
+    padding-right: 4px;
+    padding-left: 4.5px;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#confirmouter{
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
