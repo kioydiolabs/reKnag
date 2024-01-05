@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="kus"
+                 name="KioydioShort URL Shortener"
+                 start-page="index.md">
+
+    <toc-element topic="index.md"/>
+    <toc-element topic="Installation.md">
+        <toc-element topic="Manual-Installation.md"/>
+    </toc-element>
+    <toc-element topic="Developer-Documentation.md">
+        <toc-element topic="Frontend.md"/>
+        <toc-element topic="Backend.md">
+            <toc-element topic="API-Documentation.topic"/>
+        </toc-element>
+    </toc-element>
+</instance-profile>

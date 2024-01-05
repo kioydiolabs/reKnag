@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildprofiles xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/build-profiles.xsd"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <variables>
+        <primary-color>halloween</primary-color>
+        <custom-favicons>favicon.png</custom-favicons>
+        <header-logo>favicon.png</header-logo>
+        <download-title>Kioydioshort</download-title>
+        <download-page>https://example.com</download-page>
+        <showDownloadButton>true</showDownloadButton>
+    </variables>
+    <build-profile instance="ad">
+        <variables>
+            <noindex-content>true</noindex-content>
+            <primary-color>Halloween</primary-color>
+        </variables>
+    </build-profile>
+
+    <footer>
+        <copyright>Stratos Thivaios 2023</copyright>
+        <link href="https://github.com/kioydiolabs">GitHub</link>
+    </footer>
+
+    <build-profile instance="kus">
+        <variables>
+            <noindex-content>true</noindex-content>
+        </variables>
+    </build-profile>
+</buildprofiles>
