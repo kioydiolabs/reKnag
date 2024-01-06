@@ -7,13 +7,15 @@
         <custom-favicons>favicon.png</custom-favicons>
         <header-logo>favicon.png</header-logo>
         <download-title>Kioydioshort</download-title>
-        <download-page>https://example.com</download-page>
+        <download-page>https://shorten.kioydio.org</download-page>
         <showDownloadButton>true</showDownloadButton>
+        <product-web-url>https://ksdocs.kioydiolabs.org</product-web-url>
     </variables>
     <build-profile instance="ad">
         <variables>
             <noindex-content>true</noindex-content>
             <primary-color>Halloween</primary-color>
+            <product-web-url>https://ksdocs.kioydiolabs.org</product-web-url>
         </variables>
     </build-profile>
 
