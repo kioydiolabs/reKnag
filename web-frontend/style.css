@@ -75,11 +75,13 @@ button{
     background-color: #be5413;
     color: white;
     width: 100%;
+    font-size: x-large;
 }
 
 #url{
     text-align: center;
     width: 100%;
+    font-size: x-large;
     background-color: transparent;
     border: 0px;
     border-bottom: 2px solid white;
@@ -119,8 +121,8 @@ button:hover{
 #inputdetails{
     border: 1px groove rgba(255, 255, 255, 0.033);
     border-radius: 15px;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     padding: 50px;
     box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
     background: transparent;
@@ -129,6 +131,7 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
 }
 
 #confirmouter{
