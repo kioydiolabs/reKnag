@@ -3,7 +3,7 @@ body{
     text-align: center;
     color: white;
     font-family: Arial;
-    background-image: url(./icons/forest.JPG);
+    background-image: url(./icons/Mountains.JPG);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -70,12 +70,13 @@ p{
 }
 
 button{
-    border-radius: 0px;
+    border-radius: 3px;
     border: 0px;
     background-color: #be5413;
     color: white;
     width: 100%;
     font-size: x-large;
+    padding: 5px;
 }
 
 #url{
@@ -94,6 +95,7 @@ button{
 #url::placeholder{
     text-align: left;
     font-style: italic;
+    color: rgba(255, 255, 255, 0.655);
 }
 
 button:hover{
@@ -119,7 +121,7 @@ button:hover{
 }
 
 #inputdetails{
-    border: 1px groove rgba(255, 255, 255, 0.033);
+    border: 1px groove rgba(255, 255, 255, 0.267);
     border-radius: 15px;
     width: 400px;
     height: 400px;
