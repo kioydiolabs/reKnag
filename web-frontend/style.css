@@ -23,12 +23,20 @@ body{
     align-items: start;
     text-align: left;
     padding-left: 25px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
 }
 
 a{
     color: #0077ff;
     margin-left: 5px;
     margin: 0px;
+}
+
+#helpatag{
+    color: white;
+    font-style: italic;
 }
 
 p{
@@ -63,6 +71,7 @@ p{
 
 #submit{
     margin-top: 5px;
+    width: 102.5%;
 }
 
 #hr{
@@ -75,7 +84,7 @@ p{
 }
 
 button{
-    border-radius: 1.5px;
+    border-radius: 3px;
     border: 0px;
     background-color: #be5413;
     color: white;
