@@ -27,7 +27,7 @@ To install Kioydioshort on your server check "Installation Documentation".
 
 A changelog of all releases is available.
 
-## Links
+## Resources
 - GitHub Repository : [https://github.com/kioydiolabs/Kioydioshort](https://github.com/kioydiolabs/Kioydioshort)
 - Releases : [https://github.com/kioydiolabs/Kioydioshort/releases](https://github.com/kioydiolabs/Kioydioshort/releases)
 - Production Releases (stable) : [https://github.com/kioydiolabs/Kioydioshort/releases/tag/production-release](https://github.com/kioydiolabs/Kioydioshort/releases/tag/production-release)
