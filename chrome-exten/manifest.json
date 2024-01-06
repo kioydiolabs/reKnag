@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Kioydioshort",
-    "version": "31.12.2023",
+    "version": "6.1.2024",
     "description": "Extension endpoint for shortening URLs with Kioydioshort",
     "icons": {
         "16": "icons/16.png",
