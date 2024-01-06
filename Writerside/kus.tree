@@ -16,4 +16,5 @@
             <toc-element topic="API-Documentation.topic"/>
         </toc-element>
     </toc-element>
+    <toc-element topic="Changelog.md"/>
 </instance-profile>
