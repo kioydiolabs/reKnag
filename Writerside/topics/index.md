@@ -13,7 +13,7 @@ For more details on the backend check "Developer Documentation".
 [Take a look](Frontend.md)
 
 This repository contains the code for the simple HTML website frontend.
-Included are browser extension versions of the frontend with their manifest files.
+Included are browser extension versions of the frontend with their manifest.json files.
 
 ## Installation
 
