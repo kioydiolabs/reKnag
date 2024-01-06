@@ -90,6 +90,7 @@ button{
     outline: 2px solid transparent;
     outline-offset: -2px;
     color: white;
+    padding: 5px;
 }
 
 #url::placeholder{
