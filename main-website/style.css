@@ -278,3 +278,40 @@ a{
         opacity: 1;
     }
 }
+
+
+@media screen and (max-width:625px) {
+    #resources{
+        width: 300px;
+    }
+
+    #details{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #resources{
+        width: 200px;
+        
+    }
+
+    #details{
+        width: 200px;
+        height: 300px;
+
+    }
+
+
+    @keyframes resourcesup {
+        0%{
+            position: fixed;
+            top: 900px;
+        }
+    
+        100%{
+            position: fixed;
+            top: 74vh;
+        }
+    }
+}
