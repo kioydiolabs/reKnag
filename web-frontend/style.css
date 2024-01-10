@@ -181,3 +181,33 @@ button:hover{
     right: 15px;
     font-size: small;
 }
+
+
+
+
+/* below are rules for moible devices (phones)*/
+
+@media screen and (max-width:600px) {
+    #submit{
+        font-size: small;
+    }
+    #url{
+        font-size: small;
+    }
+    #maindiv{
+        font-size: small;
+    }
+    #output{
+        font-size: small;
+    }
+    #header{
+        font-size: small;
+    }
+    #kstext{
+        top: 30px;
+    }
+    #inputdetails{
+        width: 200px;
+        height: 300px;
+    }
+}
