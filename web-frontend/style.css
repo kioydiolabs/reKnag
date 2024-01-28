@@ -13,6 +13,20 @@ body{
     height: 97vh;
 }
 
+#policy{
+    size: small;
+}
+
+h4{
+    margin: 0px;
+    align-self: start;
+}
+
+rest{
+    align-self: start;
+    text-align: start;
+}
+
 #header{
     width: 100%;
     position: fixed;
@@ -37,10 +51,6 @@ a{
 #helpatag{
     color: white;
     font-style: italic;
-}
-
-p{
-    margin: 5px;
 }
 
 #maindiv{
@@ -81,6 +91,13 @@ p{
     position: fixed;
     top: 50px;
     left: 5px;
+}
+
+#hrpol{
+    width:  120%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.347);
 }
 
 button{
@@ -154,6 +171,22 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: x-large;
+}
+
+#inputdetailspol{
+    border: 1px groove rgba(255, 255, 255, 0.267);
+    border-radius: 15px;
+    width: 400px;
+    height: 600px;
+    padding: 50px;
+    box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
 }
 
 #confirmouter{
