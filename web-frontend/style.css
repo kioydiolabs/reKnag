@@ -3,7 +3,7 @@ body{
     text-align: center;
     color: white;
     font-family: Arial;
-    background-image: url(./icons/sunrise.png);
+    background-image: url(./icon/sunrise.png);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
