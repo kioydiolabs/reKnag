@@ -17,6 +17,10 @@ body{
     size: small;
 }
 
+.p{
+    margin: 5px;
+}
+
 h4{
     margin: 0px;
     align-self: start;
