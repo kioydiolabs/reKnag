@@ -3,14 +3,27 @@ body{
     text-align: center;
     color: white;
     font-family: Arial;
-    background-image: url(./icon/sunrise.png);
+    /* background-image: url(./icon/sunrise.png);
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
+    background: rgb(96,48,18);
+    background: linear-gradient(0deg, rgba(96,48,18,1) 0%, rgba(96,48,18,1) 0%, rgba(8,7,25,1) 60%, rgba(12,11,29,1) 100%); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 97vh;
+}
+
+#output{
+    color: #be5413;
+}
+
+#output:hover{
+    color: #eb5f08;
 }
 
 #policy{
@@ -49,15 +62,16 @@ rest{
 }
 
 a{
-    color: #0077ff;
+    color: #be5413;
     margin-left: 5px;
     margin: 0px;
 }
 
-#helpatag{
+.helpatag{
     color: white;
     font-style: italic;
     margin: 3px;
+    /* border: 1px solid black; */
 }
 
 #maindiv{
@@ -198,16 +212,17 @@ button:hover{
 }
 
 #confirmouter{
-    display: block;
+    display: inline-block;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: fixed;
     bottom: 10px;
     left: 10px;
     font-size: small;
+    /* border: 1px dashed black; */
 }
 
 #helpouter{
@@ -242,7 +257,7 @@ button:hover{
 }
 
 #confirmouter{
-    width: 100%;
+    width: min-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
