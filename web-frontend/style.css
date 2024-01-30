@@ -43,8 +43,8 @@ rest{
     font-style: normal;
     text-decoration: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 10px;
+    left: -10px;
 }
 
 a{
@@ -178,6 +178,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     font-size: x-large;
+    position: relative;
 }
 
 #inputdetailspol{
