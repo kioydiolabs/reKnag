@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "reKnag",
-    "version": "2024.2.25.patch",
+    "version": "2024.2.25.2",
   
     "description": "Enables users to quickly create shortened URLs via reKnag",
     "homepage_url": "https://shorten.kioydio.org",
