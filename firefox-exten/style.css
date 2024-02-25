@@ -3,34 +3,75 @@ body{
     text-align: center;
     color: white;
     font-family: Arial;
-    background-image: url(./icons/forest.JPG);
+    /* background-image: url(./icon/sunrise.png);
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; */
+    background: rgb(96,48,18);
+    background: linear-gradient(0deg, rgba(96,48,18,1) 0%, rgba(96,48,18,1) 0%, rgba(8,7,25,1) 60%, rgba(12,11,29,1) 100%); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 97vh;
 }
 
+#output{
+    color: #be5413;
+}
+
+#output:hover{
+    color: #eb5f08;
+}
+
+#policy{
+    size: small;
+}
+
+.p{
+    margin: 5px;
+}
+
+h4{
+    margin: 0px;
+    align-self: start;
+}
+
+rest{
+    align-self: start;
+    text-align: start;
+}
+
 #header{
     width: 100%;
-    position: fixed;
-    top: 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+    padding-left: 25px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    /* border: 1px solid black; */
 }
 
 a{
-    color: #0077ff;
+    color: #be5413;
     margin-left: 5px;
     margin: 0px;
 }
 
-p{
-    margin: 5px;
+.helpatag{
+    color: white;
+    font-style: italic;
+    margin: 3px;
+    /* border: 1px solid black; */
 }
 
 #maindiv{
@@ -61,25 +102,39 @@ p{
 
 #submit{
     margin-top: 5px;
+    width: 102.5%;
 }
 
 #hr{
-    width: 98%;
+    width: 40%;
     margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.347);
+    position: fixed;
+    top: 50px;
+    left: 5px;
+}
+
+#hrpol{
+    width:  120%;
+    margin-top: 5px;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.347);
 }
 
 button{
-    border-radius: 0px;
+    border-radius: 3px;
     border: 0px;
     background-color: #be5413;
     color: white;
     width: 100%;
+    font-size: x-large;
+    padding: 5px;
 }
 
 #url{
     text-align: center;
     width: 100%;
+    font-size: x-large;
     background-color: transparent;
     border: 0px;
     border-bottom: 2px solid white;
@@ -87,15 +142,23 @@ button{
     outline: 2px solid transparent;
     outline-offset: -2px;
     color: white;
+    padding: 5px;
+    border-radius: 0px;
+}
+
+#copy:hover{
+    background-color: rgba(255, 255, 255, 0.047);
 }
 
 #url::placeholder{
     text-align: left;
     font-style: italic;
+    color: rgba(255, 255, 255, 0.655);
 }
 
 button:hover{
     cursor: pointer;
+    background-color:#eb5f08;
 }
 
 #confirm{
@@ -117,10 +180,26 @@ button:hover{
 }
 
 #inputdetails{
-    border: 1px groove rgba(255, 255, 255, 0.033);
+    border: 1px groove rgba(255, 255, 255, 0.267);
     border-radius: 15px;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    position: relative;
+}
+
+#inputdetailspol{
+    border: 1px groove rgba(255, 255, 255, 0.267);
+    border-radius: 15px;
+    width: 400px;
+    height: 600px;
     padding: 50px;
     box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
     background: transparent;
@@ -129,9 +208,24 @@ button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: small;
 }
 
 #confirmouter{
+    display: inline-block;
+    text-align: center;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: small;
+    /* border: 1px dashed black; */
+}
+
+#helpouter{
     display: block;
     text-align: center;
     align-items: center;
@@ -140,6 +234,69 @@ button:hover{
     flex-direction: column;
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    right: 15px;
     font-size: small;
+}
+
+
+#helpouter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    text-align: left;
+    padding-left: 25px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    left: -40px;
+    /* border: 1px solid black; */
+}
+
+#confirmouter{
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+    padding-left: 0px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    /* border: 1px solid black; */
+}
+
+
+
+
+/* below are rules for moible devices (phones)*/
+
+@media screen and (max-width:600px) {
+    #submit{
+        font-size: small;
+    }
+    #url{
+        font-size: small;
+    }
+    #maindiv{
+        font-size: small;
+    }
+    #output{
+        font-size: small;
+    }
+    #header{
+        font-size: small;
+    }
+    #kstext{
+        top: 30px;
+    }
+    #inputdetails{
+        width: 200px;
+        height: 300px;
+    }
 }
