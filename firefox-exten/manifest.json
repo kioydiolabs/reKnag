@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "Kioydioshort",
+    "name": "reKnag",
     "version": "2024.2.25",
   
-    "description": "Enables users to quickly create shortened URLs via Kioydioshort",
+    "description": "Enables users to quickly create shortened URLs via reKnag",
     "homepage_url": "https://shorten.kioydio.org",
     "icons": {
       "48": "icon/48.png"
