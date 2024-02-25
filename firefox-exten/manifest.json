@@ -1,12 +1,12 @@
 {
     "manifest_version": 2,
     "name": "Kioydioshort",
-    "version": "6.1.2024",
+    "version": "25.2.2024",
   
     "description": "Enables users to quickly create shortened URLs via Kioydioshort",
     "homepage_url": "https://shorten.kioydio.org",
     "icons": {
-      "48": "icons/48.png"
+      "48": "icon/48.png"
     },
   
     "permissions": ["activeTab"],

@@ -18,6 +18,7 @@ body{
     height: 97vh;
     overflow: visible;
     height: max-content;
+    width: max-content;
 }
 
 #output{
