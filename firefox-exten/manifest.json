@@ -12,7 +12,7 @@
     "permissions": ["activeTab"],
   
     "browser_action": {
-      "default_icon": "icons/32.png",
+      "default_icon": "icon/32.png",
       "default_title": "Beastify",
       "default_popup": "index.html"
     }
