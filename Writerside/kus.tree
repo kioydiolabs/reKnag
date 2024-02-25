@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="kus"
-                 name="KioydioShort URL Shortener"
+                 name="reKnag Documentation"
                  start-page="index.md">
 
     <toc-element topic="index.md"/>

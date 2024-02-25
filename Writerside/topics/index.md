@@ -1,4 +1,4 @@
-# Kioydioshort URL Shortener
+# reKnag URL Shortener
 
 ## Backend
 
@@ -19,7 +19,7 @@ Included are browser extension versions of the frontend with their manifest.json
 
 [Take a look](Installation.md)
 
-To install Kioydioshort on your server check "Installation Documentation".
+To install reKnag on your server check "Installation Documentation".
 
 ## Changelog
 

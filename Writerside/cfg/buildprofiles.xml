@@ -6,8 +6,8 @@
         <primary-color>halloween</primary-color>
         <custom-favicons>favicon.png</custom-favicons>
         <header-logo>favicon.png</header-logo>
-        <download-title>Kioydioshort</download-title>
-        <download-page>https://shorten.kioydio.org</download-page>
+        <download-title>reKnag</download-title>
+        <download-page>https://reknag.com</download-page>
         <showDownloadButton>true</showDownloadButton>
         <product-web-url>https://ksdocs.kioydiolabs.org</product-web-url>
     </variables>
