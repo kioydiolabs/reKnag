@@ -10,4 +10,16 @@
         <description>Created after removal of "About API Documentation" from KioydioShort URL Shortener</description>
         <accepts>starter-topic.html</accepts>
     </rule>
+    <rule id="fd59348">
+        <description>Created after removal of "Frontend" from reKnag Documentation</description>
+        <accepts>Frontend.html</accepts>
+    </rule>
+    <rule id="d455731">
+        <description>Created after removal of "Manual Installation" from reKnag Documentation</description>
+        <accepts>Manual-Installation.html</accepts>
+    </rule>
+    <rule id="6707ac9f">
+        <description>Created after removal of "Installation" from reKnag Documentation</description>
+        <accepts>Installation.html</accepts>
+    </rule>
 </rules>
