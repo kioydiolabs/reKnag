@@ -17,6 +17,7 @@ body{
     align-items: center;
     height: 97vh;
     overflow: visible;
+    height: max-content;
 }
 
 #output{
