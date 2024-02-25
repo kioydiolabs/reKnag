@@ -7,11 +7,15 @@
                  start-page="index.md">
 
     <toc-element topic="index.md"/>
-    <toc-element topic="User-Documentation.md"/>
+    <toc-element topic="User-Documentation.md">
+        <toc-element topic="GUI_Shorten.md"/>
+        <toc-element topic="GUI_Lookup.md"/>
+    </toc-element>
     <toc-element topic="Developer-Documentation.md">
         <toc-element topic="Backend.md">
             <toc-element topic="API-Documentation.md">
-                <toc-element topic="API_Shorten.topic"/>
+                <toc-element topic="Shorten-URL.topic"/>
+                <toc-element topic="Lookup-URL.topic"/>
             </toc-element>
         </toc-element>
     </toc-element>

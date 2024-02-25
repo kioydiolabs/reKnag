@@ -1,6 +1,6 @@
 document.getElementById("submit").onclick = function(){
     original_url = document.getElementById("url").value;
-    endpoint = "https://shortapi.kioydio.org/create/?url="+original_url
+    endpoint = "https://api.reknag.com/create/?url="+original_url
     
 
     const Http = new XMLHttpRequest();

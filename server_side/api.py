@@ -39,8 +39,8 @@ def create():
 
     return Response(url_final, mimetype='text/txt')
 
-@app.route("/check/")
-def check():
+@app.route("/lookup/")
+def lookup():
 
     id = request.args.get("id")
 

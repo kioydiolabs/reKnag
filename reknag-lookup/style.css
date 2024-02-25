@@ -19,6 +19,11 @@ body{
     text-wrap: wrap;
 }
 
+#vtotalurl{
+    font-size: small;
+    display: none;
+}
+
 #output{
     color: #be5413;
     display: inline-block;
@@ -177,7 +182,7 @@ a{
 #url::placeholder{
     text-align: left;
     font-style: italic;
-    color: rgba(255, 255, 255, 0.655);
+    color: rgba(255, 255, 255, 0.27);
 }
 
 button:hover{

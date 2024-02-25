@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
+<topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
+       title="Lookup URL" id="Lookup-URL">
+
+    <title>Lookup URL</title>
+    <p>You can lookup the ID of a shortened URL to check what URL it points to. For example, the shortened URL <code>https://reknag.com/6nbys2</code> has an ID of <code>6nbys2</code>. The ID is the last randomly generated part of the URL. You can lookup the ID to check where this URL points to, in this case it's example.com.</p>
+    <p>To make a request to the lookup endpoint simply make an HTTP GET request to the endpoint <code>/lookup/</code> with the <code>id</code> parameter set to the ID (last part) of the shortened URL to lookup.</p>
+    <p>The final URL should look like this:</p>
+    <code-block lang="http">https://api.reknag.com/lookup/?id=[ID_OF_SHORTENED_URL]</code-block>
+    Where:
+    <table style="none">
+        <tr>
+            <td>[ID_OF_SHORTENED_URL]</td>
+            <td>The last part of the short URL. For example, in https://reknag.com/6nbys2 it would be 6nbys2<br></br>Note : The ID is always 6 characters long and consists of letters and numbers.</td>
+        </tr>
+    </table>
+</topic>

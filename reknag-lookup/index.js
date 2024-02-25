@@ -1,6 +1,6 @@
 document.getElementById("submit").onclick = function(){
     original_url = document.getElementById("url").value;
-    endpoint = "https://api.reknag.com/check/?id="+original_url
+    endpoint = "https://api.reknag.com/lookup/?id="+original_url.slice(-6);
     console.log(endpoint)
 
     const Http = new XMLHttpRequest();
@@ -21,7 +21,7 @@ document.getElementById("submit").onclick = function(){
 
 document.getElementById("vtotal").onclick = function(){
     output = document.getElementById("output").innerHTML;
-    endpoint = "https://api.reknag.com/get_vt_total_link/?url="+output
+    endpoint = "https://api.reknag.com/get_vt_total_link/?url="+output.slice(-6);
     console.log("heh",output)
 
     const Http = new XMLHttpRequest();
@@ -30,14 +30,16 @@ document.getElementById("vtotal").onclick = function(){
 
     Http.onloadend=(e)=>{
         var vtotalink = Http.responseText;
-        window.open(vtotalink,"_blank")
+        document.getElementById("vtotalurl").href = vtotalink;
+        document.getElementById("vtotalurl").style.display = "block";
     }
+
 
 }
 
 document.getElementById("viewfull").onclick = function(){
     original_url = document.getElementById("url").value;
-    endpoint = "https://api.reknag.com/check/?id="+original_url
+    endpoint = "https://api.reknag.com/lookup/?id="+original_url.slice(-6);
     console.log(endpoint)
 
     const Http = new XMLHttpRequest();
