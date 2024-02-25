@@ -1,6 +1,6 @@
 document.getElementById("submit").onclick = function(){
     original_url = document.getElementById("url").value;
-    endpoint = "https://shortapi.kioydio.org/check/?id="+original_url
+    endpoint = "https://api.reknag.com/check/?id="+original_url
     console.log(endpoint)
 
     const Http = new XMLHttpRequest();
@@ -21,7 +21,7 @@ document.getElementById("submit").onclick = function(){
 
 document.getElementById("vtotal").onclick = function(){
     output = document.getElementById("output").innerHTML;
-    endpoint = "https://shortapi.kioydio.org/get_vt_total_link/?url="+output
+    endpoint = "https://api.reknag.com/get_vt_total_link/?url="+output
     console.log("heh",output)
 
     const Http = new XMLHttpRequest();
@@ -37,7 +37,7 @@ document.getElementById("vtotal").onclick = function(){
 
 document.getElementById("viewfull").onclick = function(){
     original_url = document.getElementById("url").value;
-    endpoint = "https://shortapi.kioydio.org/check/?id="+original_url
+    endpoint = "https://api.reknag.com/check/?id="+original_url
     console.log(endpoint)
 
     const Http = new XMLHttpRequest();

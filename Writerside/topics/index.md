@@ -5,7 +5,7 @@
 [Take a look](Backend.md)
 
 The backend relies on Python and the Flask module. Using that, a RESTfull API has been developed.
-You can find information on how to use the [API](API-Documentation.topic) to shorten URLs programmatically.
+You can find information on how to use the [API](API_Shorten.topic) to shorten URLs programmatically.
 
 ## Changelog
 

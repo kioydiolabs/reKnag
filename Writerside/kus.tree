@@ -10,7 +10,9 @@
     <toc-element topic="User-Documentation.md"/>
     <toc-element topic="Developer-Documentation.md">
         <toc-element topic="Backend.md">
-            <toc-element topic="API-Documentation.topic"/>
+            <toc-element topic="API-Documentation.md">
+                <toc-element topic="API_Shorten.topic"/>
+            </toc-element>
         </toc-element>
     </toc-element>
     <toc-element topic="Changelog.md"/>

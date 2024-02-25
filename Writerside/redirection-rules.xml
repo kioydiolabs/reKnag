@@ -22,4 +22,8 @@
         <description>Created after removal of "Installation" from reKnag Documentation</description>
         <accepts>Installation.html</accepts>
     </rule>
+    <rule id="36baeb6">
+        <description>Created after removal of "API Documentation" from reKnag Documentation</description>
+        <accepts>Shorten-URL.html</accepts>
+    </rule>
 </rules>

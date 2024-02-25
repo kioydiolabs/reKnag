@@ -2,15 +2,13 @@
 <!DOCTYPE topic SYSTEM "https://resources.jetbrains.com/writerside/1.0/xhtml-entities.dtd">
 <topic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://resources.jetbrains.com/writerside/1.0/topic.v2.xsd"
-       id="API-Documentation" title="API Documentation">
+       id="API_Shorten" title="API Documentation" help-id="API-Documentation">
 
-    <title>
-        API Documentation
-    </title>
-    <p>To make a request to the shortening API simply make an HTTP GET request to the endpoint <code>/create/</code> on
+    <title>Shortnen URL</title>
+    <p>To make a request to the shortening endpoint simply make an HTTP GET request to the endpoint <code>/create/</code> on
         port <code>5000</code> with the <code>URL</code> parameter set to the target URL (the URL to be shortened).</p>
     <p>The final URL should look like this:</p>
-    <code-block lang="http">http://[IP_ADDRESS]:5000/create/?url=[TARGET_URL]</code-block>
+    <code-block lang="http">https://shortapi.kioydio.org:5000/create/?url=[TARGET_URL]</code-block>
     Where:
     <table style="none">
         <tr>

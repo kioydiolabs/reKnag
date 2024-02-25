@@ -1,3 +1,5 @@
 # API Documentation
 
-Start typing here...
+You can use the reKnag API to :
+
+- [Shorten URLS](API_Shorten.topic)
