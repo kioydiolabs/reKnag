@@ -1,0 +1,305 @@
+body{
+    background-color: #1e1e1e;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    /* background-image: url(./icon/sunrise.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* background: rgb(96,48,18);
+    background: linear-gradient(0deg, rgba(96,48,18,1) 0%, rgba(96,48,18,1) 0%, rgba(8,7,25,1) 60%, rgba(12,11,29,1) 100%); */
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+#output{
+    color: #be5413;
+}
+
+#output:hover{
+    color: #eb5f08;
+}
+
+#policy{
+    size: small;
+}
+
+.p{
+    margin: 5px;
+}
+
+h4{
+    margin: 0px;
+    align-self: start;
+}
+
+rest{
+    align-self: start;
+    text-align: start;
+}
+
+#header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+    padding-left: 25px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    /* border: 1px solid black; */
+}
+
+a{
+    color: #be5413;
+    margin-left: 5px;
+    margin: 0px;
+}
+
+.helpatag{
+    color: white;
+    font-style: italic;
+    margin: 3px;
+    /* border: 1px solid black; */
+}
+
+#maindiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+#copy{
+    font-size: 10px;
+    margin-top: 0px;
+    width: max-content;
+    align-self: end;
+    justify-self: end;
+    border-radius: 99px;
+    background-color: transparent;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#submit{
+    margin-top: 5px;
+    width: 75%;
+    padding: 10px;
+    border-radius: 7.5px;
+}
+
+#hr{
+    width: 40%;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.347);
+    position: fixed;
+    top: 50px;
+    left: 5px;
+}
+
+#hrpol{
+    width:  120%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.347);
+}
+
+button{
+    border-radius: 3px;
+    border: 0px;
+    background-color: #0285ff;
+    color: white;
+    width: 75%;
+    font-size: x-large;
+    padding: 5px;
+    display: inline-block;
+}
+
+#url{
+    text-align: center;
+    width: 100%;
+    font-size: x-large;
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 2px solid white;
+    outline: 0;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    color: white;
+    padding: 5px;
+    border-radius: 0px;
+}
+
+#copy:hover{
+    background-color: rgba(255, 255, 255, 0.047);
+}
+
+#url::placeholder{
+    text-align: left;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.655);
+}
+
+button:hover{
+    cursor: pointer;
+    background-color:#0065c4;
+}
+
+#confirm{
+    display: block;
+    color: rgba(255, 255, 255, 0.347);
+    font-style: italic;
+    border-radius: 5px;
+    background-color: transparent;
+    margin: 5px;
+    padding: 2px;
+    padding-right: 4px;
+    padding-left: 4.5px;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#inputdetails{
+    border: 1px groove rgba(255, 255, 255, 0.267);
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+    box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    position: relative;
+}
+
+#inputdetailspol{
+    border: 1px groove rgba(255, 255, 255, 0.267);
+    border-radius: 15px;
+    width: 400px;
+    height: 600px;
+    padding: 50px;
+    box-shadow: 0px 50px 50px rgba(0,0,0,0.2);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+
+#confirmouter{
+    display: inline-block;
+    text-align: center;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: small;
+    /* border: 1px dashed black; */
+}
+
+#helpouter{
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: small;
+}
+
+
+#helpouter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    text-align: left;
+    padding-left: 25px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    left: -40px;
+    /* border: 1px solid black; */
+}
+
+#confirmouter{
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    text-align: left;
+    padding-left: 0px;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    position: absolute;
+    /* border: 1px solid black; */
+}
+
+
+
+
+/* below are rules for moible devices (phones)*/
+
+@media screen and (max-width:600px) {
+    #submit{
+        font-size: small;
+    }
+    #url{
+        font-size: small;
+    }
+    #maindiv{
+        font-size: small;
+    }
+    #output{
+        font-size: small;
+    }
+    #header{
+        font-size: small;
+    }
+    #kstext{
+        top: 30px;
+    }
+    #inputdetails{
+        width: 200px;
+        height: 300px;
+    }
+}
