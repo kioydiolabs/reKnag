@@ -21,16 +21,22 @@ document.getElementById("submit").onclick = function(){
 
 document.getElementById("vtotal").onclick = function(){
     output = document.getElementById("output").innerHTML;
-    endpoint = "https://api.reknag.com/get_vt_total_link/?url="+output.slice(-6);
-    console.log("heh",output)
+    endpoint = "https://api.reknag.com/get_vt_total_link/?url="+output;
+    console.log("Output : ",output)
+    console.log("Endpoint : ",endpoint)
+
 
     const Http = new XMLHttpRequest();
     Http.open("GET", endpoint);
     Http.send();
 
     Http.onloadend=(e)=>{
-        var vtotalink = Http.responseText;
-        document.getElementById("vtotalurl").href = vtotalink;
+        vtotalink = Http.responseText;
+        console.log(vtotalink)
+        var a = document.querySelector('a[href="https://reknag.com"]');
+        if (a) {
+            a.setAttribute('href', vtotalink)
+        }
         document.getElementById("vtotalurl").style.display = "block";
     }
 
