@@ -72,6 +72,14 @@ rest{
     /* border: 1px solid black; */
 }
 
+#footer{
+    color: rgba(255, 255, 255, 0.348);
+    display: block;
+    position: fixed;
+    bottom: 5px;
+
+}
+
 a{
     color: #be5413;
     margin-left: 5px;
