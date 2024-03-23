@@ -1,3 +1,3 @@
-**The Kioydioshort documentation is available at https://ksdocs.kioydiolabs.org/index_md.html**
+**The reKnag documentation is available at https://docs.reknag.com/index_md.html**
 
-**Website : https://kioydioshort.kioydiolabs.org**
+**Website : https://reknag.com**

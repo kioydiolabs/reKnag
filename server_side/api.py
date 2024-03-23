@@ -2,42 +2,90 @@ import random
 import string
 import os
 from flask import Flask, request, jsonify, Response
+import requests
 import json
+import validators
+
+# options ########
+https = False
+domain = "reknag.com" # this can also be an IP #
+localhost = False # setting this to true will ignore the domain #
+# end of options #
 
 app = Flask(__name__)
+
+def generate_random_string(length):
+    characters = string.ascii_letters + string.digits
+    random_string = ''.join(random.choice(characters) for _ in range(length))
+    return random_string
+
 
 @app.route("/create/")
 def create():
 
     original_url = request.args.get("url")
 
-    def generate_random_string(length):
-        characters = string.ascii_letters + string.digits
-        random_string = ''.join(random.choice(characters) for _ in range(length))
-        return random_string
+    if original_url.startswith("https://") or original_url.startswith("http://"):
+        if validators.url(original_url):
+            random_string = generate_random_string(6)
 
-    random_string = generate_random_string(6)
+            os.makedirs(f"/var/www/html/{random_string}")
 
-    os.makedirs("/var/www/html/random_string")
+            html_code = "<!DOCTYPE html>"
+            html_code += "<html lang=\"en\">"
+            html_code += "<script src=\"index.js\"></script>"
+            html_code += "</html>"
 
-    html_code = "<!DOCTYPE html>"
-    html_code += "<html lang=\"en\">"
-    html_code += "<script src=\"index.js\"></script>"
-    html_code += "</html>"
+            js_code = f"window.location.replace(\"{original_url}\")"
 
-    js_code = f"window.location.replace(\"{original_url}\")"
+            with open(f'/var/www/html/{random_string}/index.html', 'w', encoding='utf-8') as file:
+                file.write(html_code)
+            with open(f'/var/www/html/{random_string}/index.js', 'w', encoding='utf-8') as file:
+                file.write(js_code)
 
-    with open(f'/var/www/html/{random_string}/index.html', 'w', encoding='utf-8') as file:
-        file.write(html_code)
-    with open(f'/var/www/html/{random_string}/index.js', 'w', encoding='utf-8') as file:
-        file.write(js_code)
+            # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
+            # uncomment the line above for debugging purposes
 
-    # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
-    # uncomment the line above for debugging purposes
+            url_final = f"http://127.0.0.1/{random_string}"
 
-    url_final = f"http://127.0.0.1/{random_string}"
+            return Response(url_final, mimetype='text/txt')
+        else:
+            return Response("Invalid URL format", mimetype='text/txt')
+    else:
+        original_url = f"https://{original_url}"
 
-    return Response(url_final, mimetype='text/txt')
+        if validators.url(original_url):
+            random_string = generate_random_string(6)
+
+            os.makedirs(f"/var/www/html/{random_string}")
+
+            html_code = "<!DOCTYPE html>"
+            html_code += "<html lang=\"en\">"
+            html_code += "<script src=\"index.js\"></script>"
+            html_code += "</html>"
+
+            js_code = f"window.location.replace(\"{original_url}\")"
+
+            with open(f'/var/www/html/{random_string}/index.html', 'w', encoding='utf-8') as file:
+                file.write(html_code)
+            with open(f'/var/www/html/{random_string}/index.js', 'w', encoding='utf-8') as file:
+                file.write(js_code)
+
+            # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
+            # uncomment the line above for debugging purposes
+
+            url_final = f"http://127.0.0.1/{random_string}"
+
+            return Response(url_final, mimetype='text/txt')
+        else:
+            return Response("Invalid URL format", mimetype='text/txt')
+
+
+
+
+
+
+
 
 @app.route("/lookup/")
 def lookup():
@@ -61,7 +109,7 @@ def lookup():
 @app.route("/get_vt_total_link/")
 def getvttotallink():
     urltoget = request.args.get("url")
-    
+
     url = "https://www.virustotal.com/api/v3/urls"
 
     payload = { "url": f"{urltoget}" }
@@ -83,7 +131,7 @@ def getvttotallink():
     return resp
 
 
-    
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
