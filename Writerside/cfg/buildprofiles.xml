@@ -9,13 +9,13 @@
         <download-title>reKnag</download-title>
         <download-page>https://reknag.com</download-page>
         <showDownloadButton>true</showDownloadButton>
-        <product-web-url>https://ksdocs.kioydiolabs.org</product-web-url>
+        <product-web-url>https://docs.reknag.com</product-web-url>
     </variables>
     <build-profile instance="ad">
         <variables>
             <noindex-content>true</noindex-content>
             <primary-color>Halloween</primary-color>
-            <product-web-url>https://ksdocs.kioydiolabs.org</product-web-url>
+            <product-web-url>https://docs.reknag.com</product-web-url>
         </variables>
     </build-profile>
 
