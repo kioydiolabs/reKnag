@@ -9,6 +9,7 @@ document.getElementById("submit").onclick = function(){
 
     Http.onreadystatechange=(e)=>{
         document.getElementById("output").innerHTML = Http.responseText;
+        document.getElementById("output").style = "opacity: 1;"
         document.getElementById("link").href = Http.responseText;
         console.log(Http.response);
     }
