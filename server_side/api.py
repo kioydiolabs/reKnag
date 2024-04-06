@@ -46,11 +46,15 @@ def create():
             # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
             # uncomment the line above for debugging purposes
 
-            url_final = f"http://127.0.0.1/{random_string}"
+            url_final = f"http://reknag.com/{random_string}"
 
-            return Response(url_final, mimetype='text/txt')
+            resp = Response(url_final)
+            resp.headers['Access-Control-Allow-Origin'] = '*'
+            return resp
         else:
-            return Response("Invalid URL format", mimetype='text/txt')
+            resp = Response("Invalid URL format")
+            resp.headers['Access-Control-Allow-Origin'] = '*'
+            return resp
     else:
         original_url = f"https://{original_url}"
 
@@ -74,11 +78,14 @@ def create():
             # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
             # uncomment the line above for debugging purposes
 
-            url_final = f"http://127.0.0.1/{random_string}"
-
-            return Response(url_final, mimetype='text/txt')
+            url_final = f"http://reknag.com/{random_string}"
+            resp = Response(url_final)
+            resp.headers['Access-Control-Allow-Origin'] = '*'
+            return resp
         else:
-            return Response("Invalid URL format", mimetype='text/txt')
+            resp = Response("Invalid URL format")
+            resp.headers['Access-Control-Allow-Origin'] = '*'
+            return resp
 
 
 
