@@ -7,9 +7,7 @@ import json
 import validators
 
 # options ########
-https = False
-domain = "reknag.com" # this can also be an IP #
-localhost = False # setting this to true will ignore the domain #
+vTotalAPI = "your_api_key" # replace this with your VirusTotal API key
 # end of options #
 
 app = Flask(__name__)
@@ -88,12 +86,6 @@ def create():
             return resp
 
 
-
-
-
-
-
-
 @app.route("/lookup/")
 def lookup():
 
@@ -124,7 +116,7 @@ def getvttotallink():
     payload = { "url": f"{urltoget}" }
     headers = {
         "accept": "application/json",
-        "x-apikey": "your_virustotal_api_key",
+        "x-apikey": f"{vTotalAPI}",
         "content-type": "application/x-www-form-urlencoded"
     }
 
@@ -141,9 +133,7 @@ def getvttotallink():
 
 
 
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
 
-# Version 0124.b-prod
-# For more info visit ksdocs.kioydiolabs.org
+# kioydiolabs.org 2024
