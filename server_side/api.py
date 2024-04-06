@@ -110,7 +110,9 @@ def lookup():
     # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
     # uncomment the line above for debugging purposes
 
-    return Response(url, mimetype='text/txt')
+    resp = Response(url)
+    resp.headers['Access-Control-Allow-Origin'] = '*'
+    return resp
 
 
 @app.route("/get_vt_total_link/")
