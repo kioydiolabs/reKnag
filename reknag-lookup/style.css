@@ -17,11 +17,21 @@ body{
     align-items: center;
     height: 97vh;
     text-wrap: wrap;
+    transform: translateY(100vh);
+    opacity: 0;
+    overflow-y: hidden;
+    animation: flyUp 1s forwards;
+    animation-delay: 0.3s;
 }
 
 #vtotalurl{
     font-size: small;
-    display: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#vtotalurl:hover{
+    color: #eb5f08;
 }
 
 #output{
@@ -60,24 +70,31 @@ rest{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: start;
+    align-items: center;
     text-align: left;
     padding-left: 25px;
-    color: white;
+    color: rgba(255, 255, 255, 0.679);
     font-style: normal;
     text-decoration: none;
     position: absolute;
-    top: 10px;
-    left: -10px;
+    top: 7px;
+    justify-content: center;
     /* border: 1px solid black; */
 }
 
+#header img{
+    border-radius: 4px;
+}
+
 #footer{
-    color: rgba(255, 255, 255, 0.348);
+    opacity: 0;
+    color: rgba(255, 255, 255, 0.143);
     display: block;
     position: fixed;
-    bottom: 5px;
-
+    bottom: 0px;
+    font-weight: bold;
+    animation: footerAppear 2s forwards;
+    animation-delay: 2s;
 }
 
 a{
@@ -87,9 +104,10 @@ a{
 }
 
 .helpatag{
-    color: white;
+    color: rgba(255, 255, 255, 0.609);
     font-style: italic;
     margin: 3px;
+    transition: 0.3s;
     /* border: 1px solid black; */
 }
 
@@ -109,6 +127,7 @@ a{
     justify-self: end;
     border-radius: 99px;
     background-color: transparent;
+    transition: 0.3s;
 }
 
 .material-symbols-outlined {
@@ -122,6 +141,10 @@ a{
 #submit{
     margin-top: 5px;
     width: 102.5%;
+    border-radius: 4px;
+    height: 35px;
+    font-size: 0.7em;
+    transition: 0.2s;
 }
 
 #hr{
@@ -140,7 +163,7 @@ a{
     border: 1px solid rgba(255, 255, 255, 0.347);
 }
 
-.button{
+button{
     border-radius: 3px;
     border: 0px;
     background-color: #be5413;
@@ -151,7 +174,7 @@ a{
 }
 
 .options{
-    border-radius: 1px;
+    border-radius: 4px;
     border: 0px;
     background-color: #be5413;
     color: white;
@@ -161,6 +184,8 @@ a{
     align-self: start;
     margin: 0px;
     display: none;
+    transition: 0.3s;
+    font-size: 0.6em;
 }
 
 #viewfull{
@@ -170,17 +195,23 @@ a{
 #url{
     text-align: center;
     width: 100%;
-    font-size: x-large;
+    height: 30px;
     background-color: transparent;
-    border: 0px;
+    /* border: 0px;
     border-bottom: 2px solid white;
     outline: 0;
     outline: 2px solid transparent;
     outline-offset: -2px;
+    border-radius: 0px; */
+    border: 1px solid rgba(255, 255, 255, 0.132);
     color: white;
     padding: 5px;
-    border-radius: 0px;
-    text-wrap: wrap;
+    border-radius: 5px;
+    outline: 0px;
+}
+
+.helpatag:hover{
+    color: white;
 }
 
 #copy:hover{
@@ -188,9 +219,10 @@ a{
 }
 
 #url::placeholder{
-    text-align: left;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.27);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.378);
+    font-size: 1em;
+    font-weight: normal;
 }
 
 button:hover{
@@ -310,7 +342,25 @@ button:hover{
     /* border: 1px solid black; */
 }
 
+@keyframes flyUp {
+    from {
+      opacity: 0;
+      transform: translateY(100vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }  
 
+@keyframes footerAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 
 /* below are rules for moible devices (phones)*/

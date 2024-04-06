@@ -37,7 +37,7 @@ document.getElementById("vtotal").onclick = function(){
         if (a) {
             a.setAttribute('href', vtotalink)
         }
-        document.getElementById("vtotalurl").style.display = "block";
+        document.getElementById("vtotalurl").style.opacity = "1";
     }
 
 
