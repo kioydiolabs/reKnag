@@ -197,8 +197,8 @@ button:hover{
     cursor: pointer;
     background-color:#eb5f08;
     animation: buttonGlow;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+    animation-duration: 10s;
+    animation-fill-mode:both;
 }
 
 #confirm{
