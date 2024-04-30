@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "reKnag",
-    "version": "2024.3.9",
+    "version": "2024.4.30",
     "description": "Extension endpoint for shortening URLs with reKnag",
     "icons": {
         "16": "icon/16.png",
