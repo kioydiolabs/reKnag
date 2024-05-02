@@ -26,7 +26,6 @@ def generate_random_string(length):
     random_string = ''.join(random.choice(characters) for _ in range(length))
     return random_string
 
-
 @app.route("/")
 def redirectOnHomepage():
     return (render_template("redirect.html",target_url="https://create.reknag.com"),200)
@@ -53,64 +52,89 @@ def create():
 
     if original_url.startswith("https://") or original_url.startswith("http://"):
         if validators.url(original_url):
-            random_string = generate_random_string(6)
+            try:
+                random_string = generate_random_string(6)
 
+                mycursor = database.cursor()
+                sql = "INSERT INTO reknag.URLs (ShortURL, TargetURL) VALUES (%s, %s)"
+                val = (random_string, original_url)
+                mycursor.execute(sql, val)
+                database.commit()
 
-            mycursor = database.cursor()
-            sql = "INSERT INTO reknag.URLs (ShortURL, TargetURL) VALUES (%s, %s)"
-            val = (random_string, original_url)
-            mycursor.execute(sql, val)
-            database.commit()
+                url_final = f"http://reknag.com/{random_string}"
 
-            url_final = f"http://reknag.com/{random_string}"
-
-            resp = Response(url_final)
-            resp.headers['Access-Control-Allow-Origin'] = '*'
-            return resp
+                resp = Response(url_final)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
+            except Exception as e:
+                resp = Response("There was an error.")
+                print(e)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
         else:
-            resp = Response("Invalid URL format")
-            resp.headers['Access-Control-Allow-Origin'] = '*'
-            return resp
+            try:
+                resp = Response("Invalid URL format")
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
+            except Exception as e:
+                resp = Response("There was an error.")
+                print(e)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
     else:
         original_url = f"https://{original_url}"
-
         if validators.url(original_url):
-            random_string = generate_random_string(6)
-
-            mycursor = database.cursor()
-            sql = "INSERT INTO reknag.URLs (ShortURL, TargetURL) VALUES (%s, %s)"
-            val = (random_string, original_url)
-            mycursor.execute(sql, val)
-            database.commit()
-
-            # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
-            # uncomment the line above for debugging purposes
-
-            url_final = f"http://reknag.com/{random_string}"
-            resp = Response(url_final)
-            resp.headers['Access-Control-Allow-Origin'] = '*'
-            return resp
+            try:
+                random_string = generate_random_string(6)
+                mycursor = database.cursor()
+                sql = "INSERT INTO reknag.URLs (ShortURL, TargetURL) VALUES (%s, %s)"
+                val = (random_string, original_url)
+                mycursor.execute(sql, val)
+                database.commit()
+                # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
+                # uncomment the line above for debugging purposes
+                url_final = f"http://reknag.com/{random_string}"
+                resp = Response(url_final)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
+            except Exception as e:
+                resp = Response("There was an error.")
+                print(e)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
         else:
-            resp = Response("Invalid URL format")
-            resp.headers['Access-Control-Allow-Origin'] = '*'
-            return resp
+            try:
+                resp = Response("Invalid URL format")
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
+            except Exception as e:
+                resp = Response("There was an error.")
+                print(e)
+                resp.headers['Access-Control-Allow-Origin'] = '*'
+                return resp
 
 
 @app.route("/lookup/")
 def lookup():
     id = request.args.get("id")
 
-    mycursor = database.cursor()
-    mycursor.execute(f"SELECT * FROM URLs WHERE ShortURL LIKE '{id}'")
-    url = mycursor.fetchall()
-    longURL = str(url[0][2])
+    try:
+        mycursor = database.cursor()
+        mycursor.execute(f"SELECT * FROM URLs WHERE ShortURL LIKE '{id}'")
+        url = mycursor.fetchall()
+        longURL = str(url[0][2])
 
-    # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
-    # uncomment the line above for debugging purposes
+        # print(f"\n\n\nYour shortened URL is : http://127.0.0.1:3000/{random_string}")
+        # uncomment the line above for debugging purposes
 
-    resp = Response(str(longURL))
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-    return resp
+        resp = Response(str(longURL))
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
+    except Exception as e:
+        resp = Response("There was an error.")
+        print(e)
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
 
 @app.route("/get_vt_total_link/")
 def getvttotallink():
@@ -141,4 +165,4 @@ def getvttotallink():
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
 
-# kioydiolabs.org 2024
+# kioydiolabs.org (C) 2024
